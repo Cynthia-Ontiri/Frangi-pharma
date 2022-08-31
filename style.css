@@ -1,0 +1,145 @@
+body{
+    font-family: 'Poppins';
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("https://www.ivrxpharmaceuticals.com/wp-content/themes/ivrxpharma/images/slider/3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    
+    
+}
+/*Navigation section*/
+header{
+    padding-top: 2em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    background-color:  rgb(179, 154, 121);
+}
+.prod-head{
+    padding-bottom: 2rem;
+    padding-top: 0em;
+}
+
+.header-text{
+    font-weight: 800;
+    padding-left: 150px;
+    font-family: "Poppins";
+}
+
+.logo-text {
+    margin: 2em;
+}
+
+.logo-text a{
+    text-decoration: underline;
+    color: #202020;
+    font-family: 'Oleo Script', cursive;
+    font-size: 1.5em;
+}
+
+.nav-bar{
+    margin: 0 auto;
+}
+
+.nav-bar a:hover{
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    color: #202020;
+    
+}
+
+.nav-bar a:not(:last-child){
+    margin-right: 1rem;
+}
+
+.nav-bar a.active{
+    color: #8a5608;
+    font-weight: 700;
+}
+
+.purple-btn{
+    background-color: #8a5608;
+    color: #fff;
+    border: none;
+    padding: .75rem 1rem;
+    border-radius: .25rem;
+    text-decoration: none;
+}
+
+#logo-btn {
+    margin-right: 150px;
+}
+
+.purple-btn a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.purple-btn i{
+    padding-right: 20px;
+
+}
+/*Product section*/
+.products{
+    
+    margin-left:0;
+    margin-right: 0;
+}
+.prod-head{
+    text-align: center;
+    margin-top: 0em;
+    color: #fff;
+    font-size: 3em;
+    padding-top: 2em;
+    
+    
+
+}
+.medtypes{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.medtypes-1{
+    margin-bottom: 10em;
+}
+
+
+.cards{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    
+    
+    
+   
+}
+.prod-card{
+
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    height: 28%;
+    
+}
+.prod-card:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.card-img{
+    height: 85%;
+    width: 100%;
+}
+.card-txt{
+    background-color: rgb(179, 154, 121);
+    padding-left: 2em;
+    color: #FAFAFA;
+    padding-top: 0px;
+    height: 15%;
+}
+
+   
