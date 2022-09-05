@@ -17,19 +17,18 @@ This is an online pharmacy that allows people to buy medicine and other medical 
 
 ## Installation
 ### Requirements
-#### A gadget that can access the internet.
-#### A stable internet connection.
+A gadget that can access the internet.
+A stable internet connection.
 
 ### Installation process
-#### Open the website.
-#### Navigate to the type of drug that you want to purchase.
-#### Click and then add to cart.
+Open the website.
+Navigate to the type of drug that you want to purchase.
+Click and then add to cart.
 
 
 ## Usage
 
-#### This website is used to enable people to access medical drugs from the comfort of their homes
-#### 
+This website is used to enable people to access medical drugs from the comfort of their homes.
 
 ## Contributing
 Pull requests are welcome and please make sure to update tests as appropriate.
