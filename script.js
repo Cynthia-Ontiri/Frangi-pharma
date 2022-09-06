@@ -7,8 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   };
   
-  fetch('https://drug-info-and-price-history.p.rapidapi.com/1/druginfo?drug=advil', options)
+  fetch(`https://drug-info-and-price-history.p.rapidapi.com/1/druginfo?drug=${drug}`, options)
     .then(response => response.json())
     .then(response => console.log(response))
     .catch(err => console.error(err));
 })
+
+form.addEventListener('submit', searchHandler);
