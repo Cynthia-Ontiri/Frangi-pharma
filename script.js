@@ -1,19 +1,14 @@
-function myFunction() {
-    // Declare variables
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById('myInput');
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName('li');
-  
-    // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < li.length; i++) {
-      a = li[i].getElementsByTagName("a")[0];
-      txtValue = a.textContent || a.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        li[i].style.display = "";
-      } else {
-        li[i].style.display = "none";
-      }
+document.addEventListener('DOMContentLoaded', function() {
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '29d22c4b6fmsh6e0bc3f335d797ap1cf5d4jsne944e8805340',
+      'X-RapidAPI-Host': 'drug-info-and-price-history.p.rapidapi.com'
     }
-  }
+  };
+  
+  fetch('https://drug-info-and-price-history.p.rapidapi.com/1/druginfo?drug=advil', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
+})
