@@ -1,16 +1,30 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const options = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': '29d22c4b6fmsh6e0bc3f335d797ap1cf5d4jsne944e8805340',
-      'X-RapidAPI-Host': 'drug-info-and-price-history.p.rapidapi.com'
-    }
-  };
-  
-  fetch(`https://drug-info-and-price-history.p.rapidapi.com/1/druginfo?drug=${drug}`, options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
-})
+const drugCardTemplate = document.querySelector("[data-drug-template]")
+const drugCardContainer = document.querySelector(["data-drug-cards-container"])
+const searchInput = document.querySelector("[data-search]")
 
-form.addEventListener('submit', searchHandler);
+let drugs = []
+
+
+searchInput.addEventListener("input", e => {
+  const value = e.target.value.toLowerCase()
+  drugs.forEach(drug => {
+    const isVisible = drug.name.toLowerCase().includes(value) || 
+    drug.count.toLowerCase().includes(value)
+    drug.element.classList.toggle("hide", !isVisible)
+  })
+})
+fetch("https://api.fda.gov/drug/label.json?count=openfda.brand_name.exact&limit=1000")
+  .then(response => response.json())
+  .then(data => {
+    drugs = data.map(drug => {
+      const card = drugCardTemplate.cloneNode(true).children[0]
+      const header = card.querySelector("[data-header]")
+      const body = card.querySelector("[data-body]")
+      header.textContent = drug.term
+      body.textContent = drug.count
+      drugCardContainer.append(card)
+      return { term: drug.term, count: drug.count}
+    })
+  })
+    
+ 
