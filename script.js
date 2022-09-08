@@ -3,8 +3,7 @@ const drugCardContainer = document.querySelector(["data-drug-cards-container"])
 const searchInput = document.querySelector("[data-search]")
 
 let drugs = []
-
-
+console.log(searchInput)
 searchInput.addEventListener("input", e => {
   const value = e.target.value.toLowerCase()
   drugs.forEach(drug => {
@@ -14,9 +13,9 @@ searchInput.addEventListener("input", e => {
   })
 })
 fetch("https://api.fda.gov/drug/label.json?count=openfda.brand_name.exact&limit=1000")
-  .then(response => response.json())
-  .then(data => {
-    drugs = data.map(drug => {
+  .then(res => res.json())
+  .then(drug => {
+    drugs = drug.map(drug => {
       const card = drugCardTemplate.cloneNode(true).children[0]
       const header = card.querySelector("[data-header]")
       const body = card.querySelector("[data-body]")
