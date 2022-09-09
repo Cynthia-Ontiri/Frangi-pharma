@@ -4,7 +4,7 @@ This is an online pharmacy that allows people to buy medicine and other medical 
 The client is able to search for a specific drug, add to cart and then have it delivered.
 ### By; Cynthia Mandere Ontiri
 #### Live link
-
+https://cynthia-ontiri.github.io/Frangi-pharma/
 ## Table of Contents
 - [Installation](##Installation)
 
